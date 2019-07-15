@@ -11,6 +11,40 @@ body {
   background: white;
 }
 
+#container,
+#title,
+#description,
+#tooltip,
+h4 {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+#container {
+  left: 50%;
+  top: 50%;
+}
+
+#title {
+  top: -30px;
+  width: 100%;
+  text-align: center;
+}
+
+#description {
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+
+#tooltip {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
 .county-borders {
   fill: none;
   stroke: #fff;
@@ -24,16 +58,8 @@ body {
   fill: red;
 }
 
-#tooltip {
-  background: rgba(0, 0, 0, 0.75);
-  color: white;
-  padding: 5px;
-  border-radius: 5px;
-}
-
 h4 {
+  left: 1030px;
   color: white;
-  /* text-shadow: 0 0 3 black; */
   text-shadow: 2px 2px 10px #000000;
-  /* border: 1px pink solid; */
 }
