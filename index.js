@@ -13,6 +13,14 @@ d3.select('#container')
 d3.select('#title').style('left', `${svgWidth / 2}px`);
 d3.select('#description').style('left', `${svgWidth / 2}px`);
 
+// SVG
+const svg = d3
+  .select('#container')
+  .append('svg')
+  .attr('class', 'svg-container')
+  .attr('width', svgWidth)
+  .attr('height', svgHeight);
+
 // Data
 d3.json(dataURL).then(dataset => {
   d3.json(topologyURL).then(topology => {
@@ -21,14 +29,6 @@ d3.json(dataURL).then(dataset => {
 });
 
 const visualize = (dataset, topology) => {
-  // SVG
-  const svg = d3
-    .select('#container')
-    .append('svg')
-    .attr('class', 'svg-container')
-    .attr('width', svgWidth)
-    .attr('height', svgHeight);
-
   // Vars
   const all = dataset.map(d => d.bachelorsOrHigher).sort((a, b) => a - b);
   const min = all[0];
